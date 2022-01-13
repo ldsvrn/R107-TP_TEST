@@ -9,8 +9,8 @@ def assurance(age, annee, nbr_accident, anciennete):
     else:
         tarifs = ("Vert", "Orange", "Rouge")
 
-    if age <= 25:
-        if permis <= 2:
+    if age < 25:
+        if permis < 2:
             if nbr_accident == 0:
                 return tarifs[2]
             else:
@@ -23,7 +23,7 @@ def assurance(age, annee, nbr_accident, anciennete):
             else:
                 return "Refus"
     else:
-        if permis <= 2:
+        if permis < 2:
             if nbr_accident == 0:
                 return tarifs[1]
             elif nbr_accident == 1:
@@ -41,4 +41,4 @@ def assurance(age, annee, nbr_accident, anciennete):
                 return "Refus"
 
 
-print(assurance(26, 2021, 1, 0))
+print(assurance(26, 2020, 0, 1))
